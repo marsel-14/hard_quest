@@ -21,7 +21,7 @@ def stream():
     time.sleep(3)
     if 'вёсла' in street_on_the_outskirts.inventory:
         time.sleep(3)
-        print("ВАУ! Ты переплыл реку и очутился у замка!")
+        print("ВАУ! Ты воспользовался вёслами, переплыл реку и очутился у замка!")
         print(castle)
         castle_guard_and_questions.castle_guard_and_questions()
     else:
@@ -35,10 +35,16 @@ def bushes():
     print('И нашёл покрытые мхом вёсла, аккуратно закрытые травой!')
     print("Берёшь их (1) или нет (2)?")
     answer = input()
-    if answer == '1':
+    if answer == '1' and not ('вёсла'  in street_on_the_outskirts.inventory):
         print('Ок, вёсла у тебя!')
         street_on_the_outskirts.inventory.append('вёсла')
         meadow()
     elif answer == '2':
         print('Ну ладно, наверно не хочешь таскать всякое барахло).')
         meadow()
+    elif 'вёсла'  in street_on_the_outskirts.inventory:
+        print('Вёсла уже есть в инвентаре.')
+        meadow()
+    else:
+        print("Ты неправильно ввёл ответ!")
+        bushes()
