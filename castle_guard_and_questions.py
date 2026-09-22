@@ -78,6 +78,3 @@ def castle_guard_and_questions():
             print('Не понял тебя. Думаю, что ты хочешь пройти ещё раз.')
             castle_guard_and_questions()
             exit()
-        else:
-            print('Не понял тебя. Думаю, что ты хочешь пройти ещё раз.')
-            castle_guard_and_questions()
