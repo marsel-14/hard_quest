@@ -3,8 +3,9 @@ from images import castle
 import street_on_the_outskirts
 import castle_guard_and_questions
 
+# 2-ая главная функция и локация
 def meadow():
-    print("Ты на поляне. Впереди ручей (КУПАТЬСЯ!!!) (1), рядом с ручьём - кусты (комары :( ) (2). Что выбираешь:  ")
+    print("Ты на поляне. Впереди река (КУПАТЬСЯ!!!) (1), рядом с ручьём - кусты (комары :( ) (2). Что выбираешь:  ")
     answer = input()
     if answer == '1':
         stream()
@@ -15,7 +16,7 @@ def meadow():
         meadow()
 
 
-
+# Функция для второстепенной локации
 def stream():
     print("Ты у реки. К берегу привязана лодка.")
     time.sleep(3)
@@ -28,7 +29,7 @@ def stream():
         print('Ты не можешь переплыть реку :( .')
         meadow()
 
-
+# Функция для второстепенной локации
 def bushes():
     print('Ты пошарил по кустам...')
     time.sleep(3)
